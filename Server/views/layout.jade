@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		title= title
+		block styles
+			link(rel='stylesheet', href='/css/style.css')
+	body
+		block content
+
+		script(src='/js/jquery.js')
+		//- 自定义脚本
+		block scripts
+			script(src='/js/main.js')

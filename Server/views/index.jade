@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	if user
+		include live/list
+	else
+		input#route(type='hidden' value='unauthorized')
+		form(method='post')
+			div.form-group 
+				label(for='username') 用户名
+				input.form-control#username(type='text' name='username')
+				p.text-error
+			div.form-group
+				label(for='password') 密码
+				input.form-control#password(type='number' name='password')
+				p.text-error
+			button.btn(type='sumbit') 登录
+		//- 播放视频
+		div#demo
+			input(type='search')
+			textarea
